@@ -10346,7 +10346,7 @@
 					</svg>
 				</button>
 				<!-- GitHub 链接 -->
-				<a href="https://github.com/cmliu/edgetunnel" target="_blank" rel="noopener" class="social-link"
+				<a href="https://github.com/Ubuntuser2012/tunnel" target="_blank" rel="noopener" class="social-link"
 					title="GitHub">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 						<path fill="currentColor"
@@ -10601,7 +10601,7 @@
 					<input type="text" id="cloudflareUsageAPI"
 						placeholder="https://usagepanel.pages.dev/usage.json?token=4941477918857b30d8234ac19441ebb2">
 					<small style="font-size: 12px; color: #9ca3af; margin-top: 6px; display: block;">💡 支持多账号汇总，可通过部署 <a
-							href="https://github.com/cmliu/CF-Workers-UsagePanel" target="_blank" rel="noopener"
+							href="https://github.com/Ubuntuser2012/UsagePanel" target="_blank" rel="noopener"
 							style="color: #3b82f6; text-decoration: none;">UsagePanel</a> 项目获取 UsageAPI 地址</small>
 				</div>
 			</div>
@@ -12740,7 +12740,7 @@
 				const IP_LIBRARIES = [
 					{ label: "CF官方列表v4", family: "ipv4", url: "https://cf.090227.xyz/ips-v4" },
 					{ label: "CF官方列表v6", family: "ipv6", url: "https://cf.090227.xyz/ips-v6" },
-					{ label: "CM优选列表v4", family: "ipv4", url: "https://raw.githubusercontent.com/cmliu/cmliu/main/CF-CIDR.txt" },
+					{ label: "CM优选列表v4", family: "ipv4", url: "https://raw.githubusercontent.com/Ubuntuser2012/liuproxy/main/CF-CIDR.txt" },
 					{ label: "AS13335列表v4", family: "ipv4", url: "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/13335/ipv4-aggregated.txt" },
 					{ label: "AS13335列表v6", family: "ipv6", url: "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/13335/ipv6-aggregated.txt" },
 					{ label: "AS209242列表v4", family: "ipv4", url: "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/209242/ipv4-aggregated.txt" },
@@ -15819,7 +15819,7 @@
 						</div>
 						<div class="auth-example-item">
 							<h4>优选域名 / IP API</h4>
-							<pre>https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt#优选IP_API</pre>
+							<pre>https://raw.githubusercontent.com/Ubuntuser2012/vless2sub/main/addressesapi.txt#优选IP_API</pre>
 						</div>
 						<div class="auth-example-item">
 							<h4>优选订阅生成器</h4>
@@ -15835,7 +15835,7 @@
 						</div>
 						<div class="auth-example-item">
 							<h4>汇聚现成节点</h4>
-							<pre>vless://7b102311-43fd-4e8f-977e-8090623c101d@edt-pages.github.io:443?security=tls&type=ws&host=edt-pages.github.io&path=%2F#edgetunnel</pre>
+							<pre>vless://7b102311-43fd-4e8f-977e-8090623c101d@ubuntuser2012.github.io:443?security=tls&type=ws&host=ubuntuser2012.github.io&path=%2F#edgetunnel</pre>
 						</div>
 					</div>
 				</div>
@@ -16295,9 +16295,9 @@
 		let pendingSSTLSPreviousValue = null;
 		const LOW_PERF_STORAGE_KEY = 'adminLowPerformanceMode';
 		let performanceRecheckScheduled = false;
-		const WORKER_VERSION_SOURCE_URL = 'https://raw.githubusercontent.com/cmliu/edgetunnel/main/_worker.js';
-		const PAGES_ZIP_DOWNLOAD_URL = 'https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip';
-		const CHANGELOG_RAW_URL = 'https://raw.githubusercontent.com/cmliu/edgetunnel/refs/heads/main/CHANGELOG';
+		const WORKER_VERSION_SOURCE_URL = 'https://raw.githubusercontent.com/Ubuntuser2012/tunnel/main/_worker.js';
+		const PAGES_ZIP_DOWNLOAD_URL = 'https://github.com/Ubuntuser2012/tunnel/archive/refs/heads/main.zip';
+		const CHANGELOG_RAW_URL = 'https://raw.githubusercontent.com/Ubuntuser2012/tunnel/refs/heads/main/CHANGELOG';
 		const HTTPS_PROXY_MIN_VERSION = 20260413174651;
 		const TURN_SSTP_PROXY_MIN_VERSION = 20260504172138;
 		const CHAIN_PROXY_MIN_VERSION = 20260506175102;
@@ -17192,7 +17192,7 @@
 
 			for (let attempt = 1; attempt <= maxRetries; attempt++) {
 				try {
-					const response = await fetch(`/version?_t=${Date.now()}&uuid=${encodeURIComponent(uuidValue)}`, {
+					const response = await fetch(`/edt-pages/version?_t=${Date.now()}&uuid=${encodeURIComponent(uuidValue)}`, {
 						method: 'GET',
 						headers: {
 							'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -17869,7 +17869,7 @@
 		async function loadConfig() {
 			try {
 				// 禁用 Rocket Loader 对该请求的影响
-				const response = await fetch('/admin/config.json?_t=' + Date.now(), {
+				const response = await fetch('/edt-pages/admin/config.json?_t=' + Date.now(), {
 					method: 'GET',
 					headers: {
 						'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -18154,7 +18154,7 @@
 			if (textarea._refreshLineEditor) textarea._refreshLineEditor();
 
 			try {
-				const response = await fetch('/admin/ADD.txt?_t=' + Date.now(), {
+				const response = await fetch('/edt-pages/admin/ADD.txt?_t=' + Date.now(), {
 					headers: {
 						'Cache-Control': 'no-cache, no-store, must-revalidate',
 						'Pragma': 'no-cache',
@@ -19487,7 +19487,7 @@
 			if (mode === 'custom') {
 				const customIPs = document.getElementById('customIPs').value;
 				try {
-					await fetch('/admin/ADD.txt', { method: 'POST', body: customIPs });
+					await fetch('/edt-pages/admin/ADD.txt', { method: 'POST', body: customIPs });
 				} catch (error) {
 					showToast('保存自定义IP失败', 'error');
 					return;
@@ -19681,7 +19681,7 @@
 		// 加载SubConfig JSON数据
 		async function loadSubConfigData() {
 			try {
-				const url = 'https://raw.githubusercontent.com/cmliu/cmliu/main/SUBCONFIG.json';
+				const url = 'https://raw.githubusercontent.com/Ubuntuser2012/liuproxy/main/SUBCONFIG.json';
 				const text = await fetchWithAutoMirror(url, 'SubConfig');
 				subConfigData = JSON.parse(text);
 				populateSubConfigSelect();
@@ -19865,7 +19865,7 @@
 
 		async function saveConfigToServer(section) {
 			try {
-				const response = await fetch('/admin/config.json', {
+				const response = await fetch('/edt-pages/admin/config.json', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -20058,7 +20058,7 @@
 
 		async function confirmReset() {
 			try {
-				const response = await fetch('/admin/init');
+				const response = await fetch('/edt-pages/admin/init');
 				if (!response.ok) throw new Error('重置失败');
 
 				closeResetModal();
@@ -21306,7 +21306,7 @@
 		// 加载最近8条日志
 		async function loadLogs() {
 			try {
-				const response = await fetch('/admin/log.json?_t=' + Date.now(), {
+				const response = await fetch('/edt-pages/admin/log.json?_t=' + Date.now(), {
 					headers: {
 						'Cache-Control': 'no-cache, no-store, must-revalidate',
 						'Pragma': 'no-cache',
@@ -21365,7 +21365,7 @@
 		// 显示全部日志
 		async function showAllLogs() {
 			try {
-				const response = await fetch('/admin/log.json?_t=' + Date.now(), {
+				const response = await fetch('/edt-pages/admin/log.json?_t=' + Date.now(), {
 					headers: {
 						'Cache-Control': 'no-cache, no-store, must-revalidate',
 						'Pragma': 'no-cache',
@@ -21522,7 +21522,7 @@
 				const controller = new AbortController();
 				const timeoutId = setTimeout(() => controller.abort(), 12000);
 
-				const response = await fetch(`/admin/check?${params}&_t=${Date.now()}`, {
+				const response = await fetch(`/edt-pages/admin/check?${params}&_t=${Date.now()}`, {
 					method: 'GET',
 					signal: controller.signal
 				});
@@ -22067,7 +22067,7 @@
 
 				const controller = new AbortController();
 				const timeoutId = setTimeout(() => controller.abort(), 12000);
-				const response = await fetch(`/admin/check?${params}&_t=${Date.now()}`, {
+				const response = await fetch(`/edt-pages/admin/check?${params}&_t=${Date.now()}`, {
 					method: 'GET',
 					signal: controller.signal
 				});
@@ -22226,7 +22226,7 @@
 
 			try {
 				const jsonText = await fetchWithAutoMirror(
-					'https://raw.githubusercontent.com/cmliu/cmliu/main/SUBAPI.json',
+					'https://raw.githubusercontent.com/Ubuntuser2012/liuproxy/main/SUBAPI.json',
 					'SUBAPI 列表'
 				);
 
@@ -22353,7 +22353,7 @@
 
 		async function loadPathTemplatePresets() {
 			try {
-				const url = 'https://raw.githubusercontent.com/cmliu/cmliu/main/json/edt-path-config.json';
+				const url = 'https://raw.githubusercontent.com/Ubuntuser2012/liuproxy/main/json/edt-path-config.json';
 				const text = await fetchWithAutoMirror(url, '路径模板配置');
 				pathTemplatePresets = JSON.parse(text);
 
@@ -23110,7 +23110,7 @@
 				confirmBtn.textContent = '保存中...';
 
 				// 提交到后端
-				const response = await fetch('/admin/tg.json', {
+				const response = await fetch('/edt-pages/admin/tg.json', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'
@@ -23291,7 +23291,7 @@
 						queryParams.append('APIToken', apiToken);
 					}
 
-					response = await fetch('/admin/getCloudflareUsage?' + queryParams.toString());
+					response = await fetch('/edt-pages/admin/getCloudflareUsage?' + queryParams.toString());
 				}
 
 				if (!response.ok) {
@@ -23378,7 +23378,7 @@
 				}
 
 				// 提交到后端
-				const response = await fetch('/admin/cf.json', {
+				const response = await fetch('/edt-pages/admin/cf.json', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'
@@ -23415,7 +23415,7 @@
 				currentConfig.TG.启用 = document.getElementById('telegramEnabled').checked;
 
 				// 提交到服务器，但整个 currentConfig
-				const response = await fetch('/admin/config.json', {
+				const response = await fetch('/edt-pages/admin/config.json', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify(currentConfig)
@@ -23445,7 +23445,7 @@
 
 		async function confirmClearTelegramConfig() {
 			try {
-				const response = await fetch('/admin/tg.json', {
+				const response = await fetch('/edt-pages/admin/tg.json', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ init: true })
@@ -23480,7 +23480,7 @@
 
 		async function confirmClearCloudflareConfig() {
 			try {
-				const response = await fetch('/admin/cf.json', {
+				const response = await fetch('/edt-pages/admin/cf.json', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ init: true })
@@ -23861,7 +23861,7 @@
 			const encodedURL = encodeURIComponent(completeURL);
 
 			// 构建请求URL
-			const requestURL = `/admin/getADDAPI?url=${encodedURL}`;
+			const requestURL = `/edt-pages/admin/getADDAPI?url=${encodedURL}`;
 
 			try {
 				const btn = document.getElementById('btnVerifyAPI');
@@ -26625,7 +26625,7 @@
 					}
 				}
 				const checkProtocol = ['https', 'turn', 'sstp'].includes(type) ? type : protocol;
-				const checkUrl = `/admin/check?${checkProtocol}=${encodeURIComponent(cleanProxy)}&_t=${Date.now()}`;
+				const checkUrl = `/edt-pages/admin/check?${checkProtocol}=${encodeURIComponent(cleanProxy)}&_t=${Date.now()}`;
 
 				// 如果已经终止，直接返回
 				if (signal && signal.aborted) {

@@ -1,1 +1,1 @@
-# EDT-Pages.github.io
+[edt-pages](https://ubuntuser2012.github.io/edt-pages/admin)
